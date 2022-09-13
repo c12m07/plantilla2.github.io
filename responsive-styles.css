@@ -1,0 +1,387 @@
+/* ! ********** PC ********** */
+@media ( min-width: 993px) {
+    
+    /* ? ********** HEADER ********** */
+    .wrap{
+        width: 90%;
+        margin: 0px auto;
+    }
+    #menu{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 50%;
+    }
+    #menu li{
+        padding: 0px 20px;
+    }
+
+    .card-box{
+        width: 15%;
+        height: auto;
+    }
+
+    /* ? ********** BANER ********** */
+    #banner{
+        width: 99%;
+        height: 100px;
+    }
+    #banner h1{
+        width: 100%;
+        height: 100%;
+    }
+
+    /* ? ********** PRINCIPAL ********** */
+    #principal{
+        width: 70%;
+        float: left;
+    }
+
+    /* ? ********** ASIDE ********** */
+    #aside{
+        width: 25%;
+        float: right;
+    }
+    #login #l-user, #login #l-pass{
+        margin-left: 1.5%;
+    }
+
+    /* ? ********** EXTRA BOX ********** */
+    #extra{
+        float: left;
+        width: 60%;
+    }
+
+    /* ? ********** FOOTER ********** */
+    #footer .wid-foot{
+        width: 25%;
+        margin: 1% 25px;
+    }
+    #aside .widget{
+        width: 95%;
+    }
+}
+
+/* ! ********** LAPTOP ********** */
+@media ( max-width: 992px) {
+    
+    /* ? ********** HEADER ********** */
+    .wrap{
+        width: 100%;
+    }
+    #box{
+        width: 40%;
+    }
+    #menu{
+        width: 60%;
+    }
+    #menu li{
+        width: 24%;
+    }
+
+    /* ? ********** BANNER ********** */
+    #banner{
+        width: 90%;
+        margin: 0px auto;
+        height: 100px;
+    }
+    #banner h1{
+        font-size: 40px;
+        line-height:100px;
+    }
+
+    /* ? ********** CARDS ********** */
+    .card-box{
+        width: 12%;
+        min-width: 12%;
+    }
+    .card-box .icons{
+        font-size: 50px;
+    }
+    .card-box p{
+        font-size: 15px;
+    }
+
+    /* ? ********** ASIDE ********** */
+    #aside{
+        width: 50%;
+        margin: 70px auto;
+    }
+    #social-media a:hover{
+        padding-left: 30%;
+        transform: scale(1,2, 1,2);
+    }
+    #login #l-user, #login #l-pass{
+        margin-left: 30px;
+    }
+    #login #l-pass{
+        margin-top: 25px;
+        margin-left: 32px;
+    }
+
+    /* ? ********** EXTRA BOX ********** */
+    #extra{
+        width: 80%;
+        margin: -35px auto;
+    }
+    
+    /* ? ********** FOOTER ********** */
+    #footer .wid-foot{
+        width:30%;
+        margin: 1%;
+        overflow: hidden;
+    }
+
+}
+
+/* ! ********** TABLET ********** */
+@media ( max-width: 800px) {
+    
+    /* ? ********** HEADER ********** */
+    #box{
+        margin: 0px auto;
+        width: 60%;
+        float: none;
+    }
+    #menu{
+        width: 100%;
+        height: 95%;
+        margin-top: 5px;
+    }
+    #menu li{
+        width: 25%;
+        height: 45px;
+        float: left;
+        line-height: 50px;
+    }
+
+    /* ? ********** BANNER ********** */
+    #banner{
+        width: 85%;
+        height: auto;
+    }
+    #banner h1{
+        line-height: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 30px;
+        max-height: 80px;
+        animation: showTextTablet 5s linear;
+    }
+    @keyframes showTextTablet {
+        0%{
+            transform: translateX(-600%) scale(4, 4);
+            opacity: 1;
+            padding-top: 25px;
+            margin-top: 15px;
+            padding-bottom: 25px;
+        }
+        50%{
+            transform: translateX(600%) scale(4, 4);
+            opacity: 1;
+            padding-top: 25px;
+            margin-top: 15px;
+            padding-bottom: 25px;
+        }
+        75%{
+            transform: translateX(-600%) scale(4, 4);
+            text-shadow: none;
+            color: transparent;
+            opacity: 0;
+            padding-top: 25px;
+            margin-top: 15px;
+            padding-bottom: 25px;
+        }
+        100%{
+            transform: translateX(0%) scale(1,1);
+            opacity: 1;
+        }
+    }
+
+    /* ? ********** CARDS ********** */
+    #cards{     
+        flex-wrap: wrap;
+    }
+    .card-box{
+        width: 20%;
+    }
+    .card-box .icons{
+        font-size: 40px;
+    }
+    .card-box p{
+        font-size: 0px;
+    }
+
+    /* ? ********** ASIDE ********** */
+    #aside{
+        width: 60%;
+        margin: 70px auto;
+    }
+    #login #l-user, #login #l-pass{
+        margin-left: 4%;
+    }
+
+    /* ? ********** EXTRA BOX ********** */
+    #extra{
+        width: 80%;
+        margin: -35px auto;
+    }
+    
+    /* ? ********** FOOTER ********** */
+    #footer{
+        display: flex;
+        flex-direction: column;
+    }
+    #footer .wid-foot{
+        width: 55%;
+        margin: 20px auto;
+    }
+    #footer iframe{
+        width: 400px;
+        height: 400px;
+    }
+    #footer #html-log{
+        width: 300px;
+    }
+    #footer .wid-content:nth-child(4) img{
+        width: 40px;
+        margin: 0px 5px;
+    }
+}
+
+/* ! ********** MOVIL ********** */
+@media ( max-width: 500px) {
+
+    /* ? ********** HEADER ********** */
+    #header{
+        padding: 5px 0px;
+    }
+    .wrap{
+        width: 100%;
+        margin: 5px auto;
+    }
+    #box{
+        margin: 0px auto;
+        width: 60%;
+        float: none;
+    }
+    #menu{
+        float: none;
+        height: 95%;
+        width: 95%;
+        margin: 0px auto;
+    }
+    #menu li{
+        display: inline-block;
+        list-style: none;
+        width: 49%;
+        padding: 10px 0px;
+        text-align: center;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+     
+    /* ? ********** BANNER ********** */
+    #banner{
+        width: 90%;
+        height: auto;
+    }
+    #banner h1{
+        line-height: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 25px;
+        height: 60px;
+        animation: showTextMovil 5s linear;
+    }
+    @keyframes showTextMovil {
+        0%{
+            transform: translateX(-600%) scale(5,5);
+            opacity: 1;
+            padding-top: 35px;
+            margin-top: 15px;
+            padding-bottom: 5px;
+        }
+        50%{
+            transform: translateX(600%) scale(5,5);
+            opacity: 1;
+            padding-top: 35px;
+            margin-top: 15px;
+            padding-bottom: 5px;
+        }
+        75%{
+            transform: translateX(-600%) scale(5,5);
+            text-shadow: none;
+            color: transparent;
+            opacity: 0;
+            padding-top: 35px;
+            margin-top: 15px;
+            padding-bottom: 5px;
+        }
+        100%{
+            transform: translateX(0%) scale(1,1);
+            opacity: 1;
+        }
+    }
+
+    /* ? ********** PRINCIPAL ********** */
+    #principal{
+        width: 95%;
+        margin: 70px auto;
+    }
+    #principal h2{
+        font-size: 35px;
+    }
+    #principal .articles{
+        margin: 35px auto;
+    }
+    #principal .articles h4 a{
+        width: 90%;
+        text-align: center;
+        margin: 40px auto 15px;
+    }
+    .articles .date{
+        display: flex;
+        width: 95%;
+        justify-content: center;
+        height: 20px;
+        padding: 10px;
+        background-color: #393D3F;
+        font-size: 14px;
+        border-radius: 0px;
+        color: whitesmoke;
+    }
+
+    /* ? ********** ASIDE ********** */
+    #aside{
+        width: 85%;
+    }
+    #login #l-user, #login #l-pass{
+        margin-left: 5%;
+    }
+    #login #l-pass{
+        margin-left: 5.5%;
+    }
+
+    /* ? ********** EXTRA BOX ********** */
+    #extra{
+        width: 90%;
+        margin: -35px auto;
+    }
+
+    /* ? ********** FOOTER ********** */
+    #footer .wid-foot{
+        width: 80%;
+        margin: 20px auto;
+    }
+    #footer iframe{
+        width: 350px;
+        height: 350px;
+    }
+    #footer #html-log{
+        width: 250px;
+    }
+    #footer .wid-content:nth-child(4) img{
+        width: 40px;
+        margin: 0px 5px;
+    }
+}

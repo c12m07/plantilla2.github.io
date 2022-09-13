@@ -1,0 +1,639 @@
+/* ! ********** IMPORTED FONTS ********** */
+@font-face {
+    font-family: 'Bevas';
+    src: url(./assets/fonts/BebasNeue.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Trebu';
+    src: url(./assets/fonts/TrebuchetMS.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'icon';
+    src:url(./assets/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format("svg"),
+        url(./assets/fonts/websymbols-regular-webfont.eot);
+    src:url(./assets/fonts/websymbols-regular-webfont.eot#iefix) format("embedded-opentype"), 
+        url(./assets/fonts/websymbols-regular-webfont.woff) format("woff"), 
+        url(./assets/fonts/websymbols-regular-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* todo ********** GENERAL ********** */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(/proyecto2/assets/img/pattern.png);
+}
+.icons{
+    font-family: 'icon';
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+.wrap{
+    max-width: 1200px;
+    margin: 0px auto;
+}
+.title{
+    background: url(./assets/img/pxgray.png) white;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Bevas';
+    font-weight: normal;
+    box-shadow:0px 1px 0px #393D3F, 1px 2px 0px #393D3F, 2px 3px 0px #393D3F, 3px 4px 0px #393D3F;
+    user-select: none;
+}
+
+/* todo ********** HEADER ********** */
+#header{
+    width: 100%;
+    background-color: black;
+    padding: 5px;
+    font-family: 'Bevas';
+    color: whitesmoke;
+    user-select: none;
+}
+#box{
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 55px;
+    margin-top: 2px;
+    line-height: 60px;
+    background-color: #37BCF9;
+    letter-spacing: 7px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms;
+}
+#box .icons{
+    display: block;   
+    float: left;
+    font-size: 30px;
+    margin-top: -4px;
+    margin-right: 10px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: lineal;
+}
+#box h3{
+    display: block;
+    float: right;
+    font-size: 45px;
+    transition: all 300ms;
+}
+
+/* todo ********** ANIMATION BOX ********** */
+#box:hover{
+    border-radius:10px;
+    color: #000000;
+    background-color: #ccc;
+}
+#box:hover .icons{
+    animation: fromBellow 500ms linear;
+}
+#box:hover h3{
+    animation: fromRight 300ms linear;
+}
+@keyframes rotate-gear {
+    from{
+        transition: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes fromBellow {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes fromRight {
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+/* todo ********** MENU ********** */
+#menu{
+    float: right;
+    height: 95%;
+}
+#menu li{
+    float: left;
+    line-height: 60px;
+    list-style: none;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+#menu li a{
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 300ms;
+}
+#menu li a:hover{
+    color:#37BCF9;
+    transform: scale(1.2, 1.2);
+}
+
+/* todo ********** TITLE ********** */
+#banner{
+    margin: 0px auto;
+    border: 10px solid white;
+    background-image: url(./assets/img/bakbaner.png);
+    background-position:-200px -200px ;
+    box-shadow: 0px 0px 2px gray;
+    margin-top: 20px !important;
+    overflow: hidden;
+    animation: backBanner 10s linear;
+}
+#banner h1{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: normal;
+    text-shadow: 2px 2px 1px black;
+    color: whitesmoke;
+    font-family: 'Bevas';
+    letter-spacing: 2px;
+    font-size: 45px;
+    line-height: 105px;
+    text-align: center;
+    user-select: none;
+    animation: showText 5s linear;
+}
+/* TODO ********** ANIMATION BANNER ********** */
+@keyframes backBanner {
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -200px -200px;
+    }
+}
+@keyframes showText {
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        opacity: 1;
+    }
+}
+
+    /* todo ********** CARDS ********** */
+    #cards{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .card-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 1%;
+        padding: 15px;
+        background-color: white;
+        text-align: center;
+        font-family: 'Trebu';
+        color: #01538C;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px #ddd;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 500ms;
+    }
+    .card-box *{
+        margin: 5px;
+    }
+    .card-box:last-child{
+        margin-right: 0px;
+    }
+    .card-box .icons{
+        display: block;
+        width: 100%;
+        font-size: 60px;
+        text-align: center;
+        padding: 10px;
+        color: #000000;
+        transition: all 500ms;
+    }
+    .card-box h3{
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+        transition: all 500ms;
+    }
+
+
+    /* todo ********** ANIMATION CARDS ********** */
+    .card-box:hover{
+        background-color: #000000;
+        box-shadow: 0px 0px 10px #333333;
+    }
+    .card-box:hover .icons{
+        animation: showIcon 300ms linear;
+        color: #2f78bc;
+    }
+    .card-box:hover h3, .card-box:hover p{
+        animation: fromBottom 400ms linear;
+        color:white;
+    }
+    @keyframes showIcon {
+        from{
+            transform: translateX(-200%);
+        }
+        to{
+            transform: translateX(0%);
+        }
+    }
+    @keyframes fromBottom {
+        from{
+            transform: translateY(200%);
+            color: black;
+        }
+        to{
+            transform: translate(0%);
+        }
+    }
+
+/* todo ********** PRINCIPAL ********** */
+#principal{
+    margin-top: 70px;
+    font-family: 'Trebu';
+}
+#principal h2{
+    display: block;
+    width: 95%;
+    height: 60px;
+    margin: 0px auto;
+    padding-top: 15px;
+    font-size: 40px;
+}
+#principal .articles{
+    width: 90%;
+    height: auto;
+    background-color: white;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 4px #ccc;
+}
+#principal .articles h4 a{
+    display: block;
+    width: 45%;
+    margin: 10px 15px;
+    padding: 10px 0px;
+    color: #01538C;
+    font-size: 25px;
+    font-weight: bold;
+}
+.articles .date{
+    float: right;
+    height: 20px;
+    padding: 10px;
+    background-color: #393D3F;
+    font-size: 14px;
+    color: whitesmoke;
+    border-radius: 0px 0px 0px 5px;
+}
+.articles span{
+    padding-left: 10px ;
+}
+.articles p{
+    display: block;
+    margin: 0px 25px 20px 30px;
+    font-size: 15px;
+}
+#principal .articles a{
+    text-decoration: none;
+    color: #01538C;
+    font-size: 16px;
+    transition: all 300ms;
+}
+#principal .articles a:hover{
+    color: #37BCF9;
+}
+
+/* todo ********** ASIDE ********** */
+#aside{
+    margin-top: 70px;
+    margin-right: 20px;
+    font-family: 'Trebu';
+}
+#aside .title{
+    width: 100%;
+    height: 35px;
+    margin-left: -10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    text-align: left;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+#aside .widget{
+    width: 85%;
+    height: 240px;
+    margin: 25px auto;
+    padding-top: 10px ;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -1px 2px rgba(0, 0, 0, 0.3) inset;
+}
+    /* todo ********** WIDGET BUSQUEDA ********** */
+    #search{
+        width: 90%;
+        height: 30px;
+        margin: 10px auto;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 4px #ccc inset;
+    }
+    #search input[type="search"]{
+        width: 100%;
+        height: 30px;
+        padding-left: 15px;
+        padding-right: 45px;
+        color: #555;
+        font-size: 15px;
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #ccc inset;
+        transition: all 300ms;
+    }
+    #search input[type="button"]{
+        position: absolute;
+        height: 30px;
+        width: 40px;
+        margin-left: -40px;
+        background-color: white;
+        font-size: 16px;
+        color: gray;
+        outline: none;
+        border: 1px solid #DDDDDD;
+        border-radius: 0px 5px 5px 0px;
+        box-shadow: 0px 0px 5px #ccc inset;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+    #search input[type="search"]:focus{
+        outline: none;
+        color: #000000;
+        border: 2px solid #37BCF9;
+        box-shadow: 0px 0px 5px #01538C;
+    }
+    #search input[type="button"]:focus{
+        color: #37BCF9;
+        border: 1px solid #37BCF9;
+    }
+    #search input[type="button"]:active{
+        color: #01538C;
+        transform: scale(1.1, 1.1);
+        box-shadow: 0px 0px 5px #37BCF9 inset;
+    }
+
+    /* todo ********** WIDGET LOGIN ********** */
+    #login input[type="email"], #login input[type="password"]{
+        display: block;
+        width: 75%;
+        height: 30px;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding-left: 35px;
+        padding-right: 10px;
+        color: gray;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px #ccc inset;
+        transition: all 300ms;
+    }   
+    #login input[type="email"]:focus, #login input[type="password"]:focus{
+        color: #000000;
+        border: 2px solid #37BCF9;
+        box-shadow: 0px 0px 5px #01538C;
+    }
+    #login #l-user, #login #l-pass{
+        position: absolute;
+        display: block;
+        height: 30px;
+        margin-left: 15px;
+        margin-top: 6px;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+    #login #l-pass{
+        margin-top: 27px;
+        margin-left: 18px;
+        font-size: 20px;
+    }
+    #login #l-user:hover, #login #l-pass:hover{
+        color: #37BCF9;
+    }
+
+    #login #l-user:active, #login #l-pass:active{
+        color: #37BCF9;
+    }
+
+    #l-button{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px 5%;
+    }
+    #login .l-button{
+        width: 40%;
+        height: 35px;
+        background-color: #37BCF9;
+        font-family: 'Trebu';
+        color: whitesmoke;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid #37BCF9;
+        border-radius: 5px;
+        outline: none;
+        transition: all 300ms;
+    }
+    #login .l-button:hover, #login .l-button:focus{
+        background-color: #01538C;
+        color: whitesmoke;
+        border: 1px solid #01538C;
+        box-shadow: 0px 0px 5px #2f78bc;
+        cursor: pointer;
+    }
+    #l-parr{
+        margin: 15px;
+        font-family: 'Trebu';
+    }
+    #l-parr a{
+        text-decoration: none;
+        color: #333333;
+        font-size: 14px;
+        transition: all 300ms;
+    }
+    #l-parr a:hover{
+        color: #2f78bc;
+    }
+    /* todo ********** WIDGET REDES ********** */
+    #social-media{
+        display: grid;
+    }
+    #social-media .social{
+        cursor: pointer;
+        width: 80%;
+        height: 30px;
+        margin: 0px auto;
+        line-height: 35px;
+    }
+    #social-media a{
+        display: block;
+        text-decoration: none;
+        color: #555;
+        font-size: 17px;
+        transition: all 500ms;
+    }
+    #social-media .social-logo{
+        font-size: 30px;
+    }
+    #social-media a:visited{
+        color: #555;
+    }
+    #social-media a:hover{
+        color: #37BCF9;
+    }
+
+/* todo ********** EXTRA BOX ********** */
+#extra{
+    margin: 0px 0px 50px 60px;
+    margin-left: 60px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 4px #ccc;
+}
+#extra a{
+    display: block;
+    line-height: 85px;
+    font-family: 'Bevas';
+    font-size: 45px;
+    text-decoration: none;
+    color: #01538C;
+    letter-spacing: 2px;
+    transition: all 300ms;
+}
+#extra a:hover{
+    background-color: #01538C;
+    color: whitesmoke;
+    text-shadow: 0px 0px 10px gray;
+    box-shadow: 0px 0px 20px #2f78bc;
+}
+
+/* todo ********** FOOTER ********** */
+#footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    background-color: #000000;
+}
+#footer .wid-foot{
+    margin: 1%;
+}
+#footer .wid-title{
+    background: url(./assets/img/pxgray.png) white;
+    width: auto;
+    margin: 10px;
+    padding: 10px 0px;
+    font-size: 110%;
+    text-align: center;
+    font-family: 'Trebu';
+    letter-spacing: 1px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px gray;
+}
+#footer .wid-content{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+#footer .wid-foot:first-child .wid-content{
+    display: block !important;
+    margin-left: 25px;
+    font-size: 25px;
+}
+#footer ul{
+    list-style: none;
+}
+#footer li::before{
+    content: "\2022";
+    float: left;
+    margin-right: 15px;
+    color: white; 
+}
+#footer li{
+    line-height: 150%;
+    border-bottom:1px solid #ccc ;
+}
+#footer li a{
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    color: #01538C;
+    font-family: 'Trebu';
+    transition: all 300ms;
+}
+#footer li a:hover{
+    color:#37BCF9;
+    padding-left: 60px;
+}
+#footer iframe{
+    border: 5px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+}
+#footer #html-log{
+    width: 90%;
+}
+#footer img{
+    width: 17%;
+}
+#footer p{
+    color: white;
+}
